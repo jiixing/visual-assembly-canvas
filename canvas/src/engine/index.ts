@@ -5,7 +5,7 @@ import setup, {
   Controller,
   Effect,
   MachineStatus,
-} from "machine-wasm"
+} from "../../machine-wasm/pkg/machine_wasm"
 
 import { isBlock as is, isBlock } from "@/blocks"
 import { midiManager } from "@/services/midi"

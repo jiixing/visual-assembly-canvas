@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react"
-import { Port } from "machine-wasm"
+import { Port } from "../../machine-wasm/pkg/machine_wasm"
 import { memo } from "react"
 
 import { BaseBlock, createSchema } from "@/blocks"

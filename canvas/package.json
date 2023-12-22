@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently 'rsw watch' 'vite'",
+    "devb": "vite",
     "build": "source ./ci-setup.sh && rsw build && tsc && vite build",
     "watch:rs": "cd machine-wasm && cargo watch --workdir .. --watch ../machine/src --watch machine-wasm/src -s 'wasm-pack build machine-wasm --out-dir pkg-release --target web --release'",
     "rsw": "rsw",
@@ -38,7 +39,6 @@
     "classnames": "^2.3.2",
     "immer": "^10.0.3",
     "lodash": "^4.17.21",
-    "machine-wasm": "link:/Users/poom/Projects/visual-assembly-canvas/canvas/machine-wasm/pkg",
     "nanoid": "^5.0.4",
     "nanostores": "^0.9.5",
     "react": "^18.2.0",
