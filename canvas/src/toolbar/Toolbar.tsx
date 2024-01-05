@@ -28,7 +28,10 @@ export function Toolbar() {
 
   return (
     <div className="absolute top-3 z-10 space-x-3 flex justify-between w-full px-4">
-      <div className="flex gap-x-2" />
+      <div className="flex gap-x-2" >
+       filename
+       [save button]
+        </div>
 
       <div className="flex gap-x-2">
         <RunButton />
