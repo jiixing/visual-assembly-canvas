@@ -1,0 +1,20 @@
+load save goes to localstorage
+
+
+
+demo.json is the value of testing different component
+    we have send and recieve demo
+    each output can be connected to different inputs
+
+    math opcode take parameter from the stack (add, sub
+ to load this file, press / (bring up the command line)
+ save demo (add the demo in the local storage key [CANVAS_SAVES:demo] )
+   (copy paste the value to local storage
+ /load demo
+
+
+? what does osc block do
+it has a wave type in the block setting
+depend on the input, it interpret that as the time into the wave
+ and send the output
+

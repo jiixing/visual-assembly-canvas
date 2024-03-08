@@ -65,6 +65,9 @@ dependencies:
   '@uiw/react-codemirror':
     specifier: ^4.21.21
     version: 4.21.21(@babel/runtime@7.23.6)(@codemirror/autocomplete@6.11.1)(@codemirror/language@6.9.3)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.5)(@codemirror/state@6.3.3)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.22.3)(codemirror@6.0.1)(react-dom@18.2.0)(react@18.2.0)
+  '@vitejs/plugin-react-swc':
+    specifier: ^3.5.0
+    version: 3.5.0(vite@5.0.10)
   classnames:
     specifier: ^2.3.2
     version: 2.3.2
@@ -74,6 +77,9 @@ dependencies:
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
+  machine-wasm:
+    specifier: link:C:/work/rust-samples/visual-assembly-canvas/canvas/machine-wasm/pkg
+    version: link:machine-wasm/pkg
   nanoid:
     specifier: ^5.0.4
     version: 5.0.4
@@ -109,7 +115,7 @@ dependencies:
     version: 1.0.4
   vite-plugin-glsl:
     specifier: ^1.2.1
-    version: 1.2.1(rollup@@lezer+generator+rollup)(vite@5.0.10)
+    version: 1.2.1(vite@5.0.10)
   webmidi:
     specifier: ^3.1.8
     version: 3.1.8
@@ -195,7 +201,7 @@ devDependencies:
     version: 2.0.11(vite@5.0.10)
   vite-plugin-top-level-await:
     specifier: ^1.4.1
-    version: 1.4.1(rollup@@lezer+generator+rollup)(vite@5.0.10)
+    version: 1.4.1(vite@5.0.10)
   vite-tsconfig-paths:
     specifier: ^4.2.2
     version: 4.2.2(typescript@5.3.3)(vite@5.0.10)
@@ -2196,7 +2202,7 @@ packages:
       '@codemirror/view': 6.22.3
     dev: false
 
-  /@rollup/plugin-virtual@3.0.2(rollup@@lezer+generator+rollup):
+  /@rollup/plugin-virtual@3.0.2:
     resolution: {integrity: sha512-10monEYsBp3scM4/ND4LNH5Rxvh3e/cVeL3jWTgZ2SrQ+BmUoQcopVQvnaMcOnykb1VkxUFuDAN+0FnpTFRy2A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2204,11 +2210,9 @@ packages:
     peerDependenciesMeta:
       rollup:
         optional: true
-    dependencies:
-      rollup: link:@lezer/generator/rollup
     dev: true
 
-  /@rollup/pluginutils@5.0.5(rollup@@lezer+generator+rollup):
+  /@rollup/pluginutils@5.0.5:
     resolution: {integrity: sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2220,7 +2224,6 @@ packages:
       '@types/estree': 1.0.2
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: link:@lezer/generator/rollup
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.9.0:
@@ -2324,7 +2327,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-darwin-x64@1.3.100:
@@ -2333,7 +2335,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-linux-arm64-gnu@1.3.100:
@@ -2342,7 +2343,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-linux-arm64-musl@1.3.100:
@@ -2351,7 +2351,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-linux-x64-gnu@1.3.100:
@@ -2360,7 +2359,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-linux-x64-musl@1.3.100:
@@ -2369,7 +2367,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-win32-arm64-msvc@1.3.100:
@@ -2378,7 +2375,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-win32-ia32-msvc@1.3.100:
@@ -2387,7 +2383,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core-win32-x64-msvc@1.3.100:
@@ -2396,7 +2391,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /@swc/core@1.3.100:
@@ -2421,15 +2415,12 @@ packages:
       '@swc/core-win32-arm64-msvc': 1.3.100
       '@swc/core-win32-ia32-msvc': 1.3.100
       '@swc/core-win32-x64-msvc': 1.3.100
-    dev: true
 
   /@swc/counter@0.1.2:
     resolution: {integrity: sha512-9F4ys4C74eSTEUNndnER3VJ15oru2NumfQxS8geE+f3eB5xvfxpWyqE5XlVnxb/R14uoXi6SLbBwwiDSkv+XEw==}
-    dev: true
 
   /@swc/types@0.1.5:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
-    dev: true
 
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2886,6 +2877,17 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
+
+  /@vitejs/plugin-react-swc@3.5.0(vite@5.0.10):
+    resolution: {integrity: sha512-1PrOvAaDpqlCV+Up8RkAh9qaiUjoDUcjtttyhXDKw53XA6Ve16SOp6cCOpRs8Dj8DqUQs6eTW5YkLcLJjrXAig==}
+    peerDependencies:
+      vite: ^4 || ^5
+    dependencies:
+      '@swc/core': 1.3.100
+      vite: 5.0.10
+    transitivePeerDependencies:
+      - '@swc/helpers'
+    dev: false
 
   /@vitejs/plugin-react@4.2.1(vite@5.0.10):
     resolution: {integrity: sha512-oojO9IDc4nCUUi8qIR11KoQm0XFFLIwsRBwHRR4d/88IWghn1y6ckz/bJ8GHDCsYEJee8mDzqtJxh15/cisJNQ==}
@@ -5352,13 +5354,13 @@ packages:
       - supports-color
       - terser
 
-  /vite-plugin-glsl@1.2.1(rollup@@lezer+generator+rollup)(vite@5.0.10):
+  /vite-plugin-glsl@1.2.1(vite@5.0.10):
     resolution: {integrity: sha512-yBpBHWfdiRVMxN3yIKx4qmwuqMwoMAnEMipVI0NbdIieyRFO8hpW8VTFHYi3W75h7CkvsotteP9C4pln51OE0A==}
     engines: {node: '>= 16.15.1', npm: '>= 8.11.0'}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
     dependencies:
-      '@rollup/pluginutils': 5.0.5(rollup@@lezer+generator+rollup)
+      '@rollup/pluginutils': 5.0.5
       vite: 5.0.10
     transitivePeerDependencies:
       - rollup
@@ -5372,12 +5374,12 @@ packages:
       vite: 5.0.10
     dev: true
 
-  /vite-plugin-top-level-await@1.4.1(rollup@@lezer+generator+rollup)(vite@5.0.10):
+  /vite-plugin-top-level-await@1.4.1(vite@5.0.10):
     resolution: {integrity: sha512-hogbZ6yT7+AqBaV6lK9JRNvJDn4/IJvHLu6ET06arNfo0t2IsyCaon7el9Xa8OumH+ESuq//SDf8xscZFE0rWw==}
     peerDependencies:
       vite: '>=2.8'
     dependencies:
-      '@rollup/plugin-virtual': 3.0.2(rollup@@lezer+generator+rollup)
+      '@rollup/plugin-virtual': 3.0.2
       '@swc/core': 1.3.100
       uuid: 9.0.1
       vite: 5.0.10
